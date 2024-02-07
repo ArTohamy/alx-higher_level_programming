@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-def uppercase(str):
-    for i in range(len(str)):
-        if ord(str[i]) >= 97 and ord(str[i]) <= 122:
-            num = 32
-        else:
-            num = 0
-        print("{:c}".format(ord(str[i]) - num), end='')
-    print()
+def print_last_digit(number):
+    if number >= 0:
+        l_digit = number % 10
+    else:
+        l_digit = number % -10
+        l_digit *= -1
+
+    print("{:d}".format(l_digit), end='')
+    return (l_digit)
